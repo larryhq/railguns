@@ -23,7 +23,7 @@ class UploadParamsSerializer(serializers.Serializer):
 
 class UserCreatedSerializer(serializers.ModelSerializer):
     token = serializers.SerializerMethodField()
-    # type = serializers.SerializerMethodField()
+    type = serializers.SerializerMethodField()
     ebank_card_status = serializers.SerializerMethodField()
 
     class Meta:
