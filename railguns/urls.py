@@ -31,7 +31,7 @@ urlpatterns += [
 urlpatterns += [
     url(r'^download_url/(?P<pk>\w+)/$', download_url, name='download_url'),
     url(r'^upload_params/(?P<pk>\w+)/$', upload_params, name='upload_params'),
-    url(r'^favicon\.ico', RedirectView.as_view(url='{}favicon.ico'.format(settings.STATIC_URL), permanent=True)),
+    # url(r'^favicon\.ico', RedirectView.as_view(url='{}favicon.ico'.format(settings.STATIC_URL), permanent=True)),
     url(r'^robots\.txt', cache_page(60 * 60)(TemplateView.as_view(template_name='{}'.format('robots_test.txt' if settings.TEST_ENV else 'robots.txt'), content_type='text/plain')))
 ]
 
