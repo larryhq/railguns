@@ -24,7 +24,6 @@ class UploadParamsSerializer(serializers.Serializer):
 class UserCreatedSerializer(serializers.ModelSerializer):
     token = serializers.SerializerMethodField()
     type = serializers.SerializerMethodField()
-    ebank_card_status = serializers.SerializerMethodField()
 
     class Meta:
         model = get_user_model()
@@ -40,12 +39,6 @@ class UserCreatedSerializer(serializers.ModelSerializer):
             return {'code': obj.type, 'message': type_list[0]}
         else:
             return {'code': 0, 'message': ''}
-
-    def get_ebank_card_status(self, obj):
-        EBANK_STATUS = ((0, ''), (10, '已受理'), (50, '正在开通电子账户'), (100, '开户成功'), (200, '设置密码成功'), (-10, '实名认证失败'), (-100, '开户失败'))
-        status_list = [i[1] for i in EBANK_STATUS if i[0] == obj.ebank_card_status]
-        return {'code': obj.ebank_card_status,
-                'message': '' if status_list == [] else status_list[0]}
 
 
 class UserPasswordSerializer(serializers.ModelSerializer):
