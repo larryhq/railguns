@@ -65,7 +65,7 @@ def redis_master(user_id=None):
 
 def datetime_to_unixtime(date_time):
     created_str = date_time.strftime('%Y-%m-%d %H:%M:%S')
-    date_time = datetime.datetime.strptime(created_str, '%Y-%m-%d %H:%M:%S') + datetime.timedelta(hours=8)
+    date_time = datetime.datetime.strptime(created_str, '%Y-%m-%d %H:%M:%S')
     return int(time.mktime(date_time.timetuple()))
 
 
