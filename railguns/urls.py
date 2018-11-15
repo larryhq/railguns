@@ -4,7 +4,7 @@ from django.conf.urls import include, url
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.views.decorators.cache import cache_page
-from django.views.generic.base import RedirectView, TemplateView
+from django.views.generic.base import TemplateView
 from django.views.i18n import javascript_catalog
 from rest_framework_jwt.views import obtain_jwt_token, refresh_jwt_token, verify_jwt_token
 
