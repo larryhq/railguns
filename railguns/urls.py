@@ -16,7 +16,7 @@ from .views import SwaggerSchemaView
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^i18n/', include('django.conf.urls.i18n')),
-    url(r'^jsi18n/(?P<packages>\S+?)/$', javascript_catalog)
+#     url(r'^jsi18n/(?P<packages>\S+?)/$', javascript_catalog)
 ]
 # 第三方:
 urlpatterns += [
