@@ -13,7 +13,7 @@ setup(
     version='0.1.9',
     install_requires=[
         'Django',
-        'djangorestframework==2.2.0',
+        'djangorestframework==3.9.1',
         'djangorestframework-jwt',
         'djangorestframework-xml',
         'django-rest-swagger',
