@@ -19,7 +19,7 @@ setup(
         'django-rest-swagger',
         #
         'django-ckeditor',
-        'django-filter',
+        'django-filter==2.1.0',
         'django-htmlmin',
         'itunes-iap',
         'mysqlclient',
