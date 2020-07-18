@@ -1,5 +1,5 @@
 from django.conf import settings
-from ipware.ip import get_ip
+from ipware import get_client_ip
 from rest_framework import permissions
 
 
@@ -54,7 +54,7 @@ class IsRelationOrReadOnly(permissions.BasePermission):
 class IsWhiteIpOrIsAuthenticated(permissions.BasePermission):
 
     def has_permission(self, request, view):
-        ip_addr = get_ip(request)
+        ip_addr = get_client_ip(request)
         white_ips = settings.WHITE_IPS
         if not request.user.is_authenticated:  # 如果没有登录.
             if ip_addr in white_ips:
