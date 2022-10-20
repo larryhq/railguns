@@ -23,7 +23,6 @@ setup(
         'django-htmlmin',
         'itunes-iap',
         'mysqlclient',
-        'pylibmc',
         'redis',
         #
         'djangorestframework-camel-case'
