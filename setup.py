@@ -21,7 +21,6 @@ setup(
         'django-ckeditor',
         'django-filter',
         'django-htmlmin',
-        'itunes-iap',
         'mysqlclient',
         'redis',
         #
